@@ -23,3 +23,13 @@
 //? fungsi didefinisikan menggunakan tanda panah atau fat arrow ( => ) dan lebih singkat
 //~ Clousure
 //? Suatu fungsi yang dapat mengakses variabel di dalam lexical scope-nya (fungsi bersarang)
+
+//@ OOP
+//? Object Oriented Programming
+//? Prototype adalah properti internal yang akan selalu ada ketika sebuah objek dibuat. 
+//~ Overiding Method & Construct
+//? teknik untuk kita melakukan perombakan (baik secara keseluruhan maupun tidak) pada sebuah method ataupun constructor yang dimiliki oleh parent class
+//~ Object composition
+//? prinsip komposisi dari sebuah alur bisnis tanpa perlu melakukan pewarisan dari parent class
+//~ Built-in Class
+//? 
