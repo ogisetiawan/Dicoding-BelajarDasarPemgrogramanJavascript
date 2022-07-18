@@ -32,4 +32,11 @@
 //~ Object composition
 //? prinsip komposisi dari sebuah alur bisnis tanpa perlu melakukan pewarisan dari parent class
 //~ Built-in Class
-//? 
+//? proses manipulasi class bawaan javascript
+
+//@ Functional Programming
+//? jadi berfokus pada what to solve mau menggunakan gaya apa saja, yang penting ringkas
+//~ Pure Function
+//? merupakan konsep dari pembuatan fungsi yang mengharuskan fungsi untuk tidak bergantung terhadap nilai yang berada di luar fungsi atau parameternya
+//~ Array Foreach
+//? Array forEach merupakan fungsi bawaan dari array yang berfungsi untuk memanggil fungsi callback pada setiap iterasi index array

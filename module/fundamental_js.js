@@ -358,35 +358,6 @@ const myAge = (birthday) => {
 
 console.log(myAge("2000-01-22")); // 21 tahun
 
-class Mail {
-  constructor(author) {
-    this.from = author;
-    this._contacts = [];
-  }
-
-  sendMessage(msg, to) {
-    console.log(`by parent classs: ${msg} to ${to} from ${this.from}`);
-    this._contacts.push(to);
-  }
-
-  showAllContacts() {
-    return this._contacts;
-  }
-}
-
-class WhatsApp extends Mail {
-  constructor(username, isBussinessAccount, phoneNumber) {
-    super(phoneNumber);
-    this.username = username;
-    this.isBussinessAccount = isBussinessAccount;
-  }
-  sendMessage(msg, to) {
-    //? overiding total class parent sendmessage
-    super.sendMessage(msg, to); //? call method pada parent class
-    console.log(`by child class: ${msg} to ${to} from ${this.from}`);
-  }
-}
-
 //~ Quiz OOP
 class Animal {
   constructor(name, age, isMammal) {
@@ -417,3 +388,128 @@ console.log(myRabbit.eat());
 const myEagle = new Eagle("Elo", 4);
 myEagle.fly();
 console.log(myEagle.fly());
+
+
+//@ Functional Programming
+//~ Higher-Order Function
+const hello = () => {
+  console.log('Hello1!')
+};
+const say = (someFunction) => {
+  someFunction(); //? ini akan call function diatas karena kasih paramter hello yang sama dgn function hello()
+}
+const sayHello = () => {
+    return () => {
+        console.log('Hello3!');
+    }
+}
+hello();
+say(hello); 
+sayHello()();
+
+
+//~ Array Map
+const names = ['Harry', 'Ron', 'Jeff', 'Thomas'];
+const newNamesWithExcMark = names.map((name) => `${name}!`); //? tanpa menggunakan for kita bisa menambahkan ! pada value array
+console.log(newNamesWithExcMark);
+
+//~ Array Filter
+const truthyArray = [1, '', 'Hallo', 0, null, 'Harry', 14].filter((item) => Boolean(item)); //? menyaring array nilai falsy
+console.log(truthyArray);
+const students = [ //? array objct
+  {
+    name: 'Harry',
+    score: 60,
+  },
+  {
+    name: 'James',
+    score: 88,
+  },
+  {
+    name: 'Ron',
+    score: 90,
+  },
+  {
+    name: 'Bethy',
+    score: 75,
+  }
+];
+const eligibleForScholarshipStudents = students.filter((student) => student.score > 85); //? filter array yang score 85
+const test = students.find(student => student.score > 85);
+console.log(test);
+console.log(eligibleForScholarshipStudents);
+console.log(students[2].name);
+
+//~ Aray Reduce
+const students = [
+  {
+    name: 'Harry',
+    score: 60,
+  },
+  {
+    name: 'James',
+    score: 88,
+  },
+  {
+    name: 'Ron',
+    score: 90,
+  },
+  {
+    name: 'Bethy',
+    score: 75,
+  }
+];
+
+const totalScore = students.reduce((acc, student) => acc + student.score, 0); //? callback accumltor dan new array student, 0 init value
+console.log(totalScore);
+
+//~ Array Find
+const students = [ //? array objct
+  {
+    name: 'Harry',
+    score: 60,
+  },
+  {
+    name: 'James',
+    score: 88,
+  },
+  {
+    name: 'Ron',
+    score: 90,
+  },
+  {
+    name: 'Bethy',
+    score: 75,
+  }
+];
+const test = students.find(student => student.score > 85); //? berbeda dengan array.filter find mencari yg lebih spesifik dan hanya 1
+
+//~ Array Sort
+const array1 = [1, 30, 4, 1000];
+const compareNumber = (a, b) => {
+  return a - b; //? Jika, negative maka `a` akan diletakkan sebelum `b` dan Jika, positive maka `b` akan diletakkan sebelum `a`
+};
+const sorting = array1.sort(compareNumber);
+console.log(sorting);
+
+//~ Array foreach
+const names = ['Harry', 'Ron', 'Jeff', 'Thomas'];
+names.forEach((name) => {
+  console.log(`Hello, ${name}!`);
+});
+const newNamesWithExcMark = names.map((name) => `Hello, ${name}`); //? tanpa menggunakan for kita bisa menambahkan ! pada value array
+console.log(newNamesWithExcMark);
+
+//~ Quiz 
+const books = [
+  { title: 'The Da Vinci Code', author: 'Dan Brown', sales: 5094805 },
+  { title: 'The Ghost', author: 'Robert Harris', sales: 807311 },
+  { title: 'White Teeth', author: 'Zadie Smith', sales: 815586 },
+  { title: 'Fifty Shades of Grey', author: 'E. L. James', sales: 3758936 },
+  { title: 'Jamie\'s Italy', author: 'Jamie Oliver', sales: 906968 },
+  { title: 'I Can Make You Thin', author: 'Paul McKenna', sales: 905086 },
+  { title: 'Harry Potter and the Deathly Hallows', author: 'J.K Rowling', sales: 4475152 },
+];
+const salesBooks = books.filter((book) => book.sales >= 1000000); 
+const greatAuthors = salesBooks.map((salesBook) => `${salesBook.author} adalah penulis buku ${salesBook.title} yang sangat hebat!`); 
+console.log(greatAuthors);
