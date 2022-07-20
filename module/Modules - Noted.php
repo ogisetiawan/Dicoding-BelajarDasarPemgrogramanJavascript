@@ -40,3 +40,13 @@
 //? merupakan konsep dari pembuatan fungsi yang mengharuskan fungsi untuk tidak bergantung terhadap nilai yang berada di luar fungsi atau parameternya
 //~ Array Foreach
 //? Array forEach merupakan fungsi bawaan dari array yang berfungsi untuk memanggil fungsi callback pada setiap iterasi index array
+
+//@ Setup Enviorenment
+//? JavaScript dapat berjalan di berbagai platform tidak hanya brwoser bisa nodejs
+//~ Node.js Feature
+//? Asynchronous & Event-driven : tidak memblokir proses lain sembari menunggu satu proses selesai
+//? Very Fast : karena berjalan pada V8 JavaScript Engine dari Google Chrome.
+//? Single Threaded but Highly Scalable : model single thread dengan event looping
+//? Oleh karena itu, karakteristik Node yang asynchronous dan single thread dirancang untuk memungkinkan implementasi server yang dapat menangani banyak request pada waktu yang sama.
+//~ Export & Import
+//? Modul bekerja dengan cara exporting dan importing nilai, jadi bisa dipakai di module js
