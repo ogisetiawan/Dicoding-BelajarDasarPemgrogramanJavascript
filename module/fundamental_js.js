@@ -513,3 +513,81 @@ const books = [
 const salesBooks = books.filter((book) => book.sales >= 1000000); 
 const greatAuthors = salesBooks.map((salesBook) => `${salesBook.author} adalah penulis buku ${salesBook.title} yang sangat hebat!`); 
 console.log(greatAuthors);
+
+//@ Error Handling
+//~ Try Catch
+try {
+   console.log(1);
+   ga_ada(); //? function does not available
+   console.log(2);
+} catch (error) {
+  console.log("error ni"); //? error
+  console.log(error.name); //? jenis error
+  console.log(error.message); 
+  console.log(error.stack); //? detail
+} finally {
+  console.log("Akan tetap dieksekusi");
+}
+
+//~ Throwing Errors
+let json = '{ "name": "Yoda", "age": 20 }';
+try {
+    let user = JSON.parse(json);
+    if (!user.name) {
+      throw new SyntaxError("'name' is required."); //? if we do not use throw user.age will still run
+    }
+    errorCode;
+    console.log(user.age);  //? 20
+} catch (error) {
+  if (error instanceof SyntaxError) { //? instanceof can type of error
+    console.log(`JSON Error: ${error.message}`);
+  } else if (error instanceof ReferenceError) {
+      console.log(error.message);
+  } else {
+      console.log(error.stack);
+  }
+}
+
+//~ Quiz  
+// TODO 1
+class ValidationError extends Error {
+  constructor(message) {
+      super(message);
+      this.name = "ValidationError";
+  }
+}
+// TODO 2
+function validateNumberInput(a,b,c){
+  if(typeof(a) !== "number"){
+    throw new ValidationError("Argumen pertama harus number")
+  }else if(typeof(b) !== "number"){
+    throw new ValidationError("Argumen kedua harus number")
+  }else if(typeof(c) !== "number"){
+    throw new ValidationError("Argumen ketiga harus number")
+  }
+}
+
+const detectTriangle = (a, b, c) => {
+  try{
+    validateNumberInput(a,b,c)
+    
+    if (a === b && b === c ) {
+      return 'Segitiga sama sisi';
+    }
+    if (a === b || a === c || b === c) {
+      return 'Segitiga sama kaki';
+    }
+    
+    return 'Segitiga sembarang';
+  }catch(error){
+    if (error instanceof ValidationError){
+      return `${error.message}`;
+    } 
+  }
+}
+
+console.log(detectTriangle(false,2,3));
+console.log(detectTriangle(1,false,3));
+console.log(detectTriangle(1,2,false));
+
+

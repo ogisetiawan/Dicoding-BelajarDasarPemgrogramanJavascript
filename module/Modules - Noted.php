@@ -50,3 +50,5 @@
 //? Oleh karena itu, karakteristik Node yang asynchronous dan single thread dirancang untuk memungkinkan implementasi server yang dapat menangani banyak request pada waktu yang sama.
 //~ Export & Import
 //? Modul bekerja dengan cara exporting dan importing nilai, jadi bisa dipakai di module js
+
+//@ Penangan Error
