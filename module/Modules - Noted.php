@@ -51,4 +51,15 @@
 //~ Export & Import
 //? Modul bekerja dengan cara exporting dan importing nilai, jadi bisa dipakai di module js
 
-//@ Penangan Error
+//@ Concurency
+//? beberapa komputasi yang terjadi pada saat yang bersamaan
+//~ Synchronous vs Asynchronous
+//? Sync ; proses menjalankan baris code secara beruurutan, proses yang paling pertama akan di excuete pertama
+//? Async ; proses menjalankan baris code secara bersamaan, proses yang paling lama akan terkahir
+//~ Callback
+//? dibutuhkan untuk mendapatkan nilai yang berasal dari asynchronous function
+//~ Callback hell
+//? karena banyak sekali callback function yang bersarang karena saling membutuhkan satu sama lain
+//~ Promise
+//? sebuah objek yang digunakan untuk membuat sebuah komputasi (kode) ditangguhkan dan berjalan secara asynchronous .then / catch
+//? gunakan promise pada proses ascy berantai
