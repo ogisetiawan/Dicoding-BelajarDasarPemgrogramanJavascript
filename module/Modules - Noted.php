@@ -63,3 +63,8 @@
 //~ Promise
 //? sebuah objek yang digunakan untuk membuat sebuah komputasi (kode) ditangguhkan dan berjalan secara asynchronous .then / catch
 //? gunakan promise pada proses ascy berantai
+
+
+//@ NPM
+//? sebuah package manager untuk membantu membuat web app dalam javascript
+//? untuk minginstall package secara global npm install -g [nama-package]
