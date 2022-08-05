@@ -64,7 +64,13 @@
 //? sebuah objek yang digunakan untuk membuat sebuah komputasi (kode) ditangguhkan dan berjalan secara asynchronous .then / catch
 //? gunakan promise pada proses ascy berantai
 
-
 //@ NPM
 //? sebuah package manager untuk membantu membuat web app dalam javascript
 //? untuk minginstall package secara global npm install -g [nama-package]
+//? --save-dev untuk memasang devDependencies (jadi didalam folder node_module ada bbrpa dependecies )
+
+//@ JAVASCRIPT TESTING
+//? Static Test : memastikan tidak ada typo 
+//? Unit test; memastikan setiap unit kode yg ditulis sudah berjalan dgn baik
+//? Integration test; Memastikan beberapa serangkaian fungsi yang saling ketergantungan satu sama lain berjalan semestinya
+//? End-to-End test; sebuah aplikasi untuk menguji flow dari awal hingga akhir
