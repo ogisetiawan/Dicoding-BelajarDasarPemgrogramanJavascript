@@ -43,7 +43,7 @@ console.log(arr);
 
 //~ Spread Operator
 const favorites = ["Seafood", "Salad", "Nugget", "Soup"];
-console.log(...favorites); //? output tidak dalam bentuk array
+console.log(...favorites); //? output tidak dalam bentuk indexing array
 
 //~ Destructuring object
 const profile = {
@@ -143,7 +143,7 @@ function sum(...numbers) {
   }
   return result;
 }
-console.log(sum(1, 2, 3, 4, 5)); //? call function with array param
+console.log(sum(1, 2, 3, 4, 5)); //? call function with many param
 
 //~ Arrow function
 const sum = (...numbers) => {
@@ -624,7 +624,6 @@ const executorFunction = (resolve, reject) => { //? Executor function
   }
 }
 
-
 const makeCoffee = () => { 
   return new Promise(executorFunction); //? call promise
 }
@@ -648,7 +647,7 @@ const checkStock = () => {
   });
 };
 
-//? function handle
+//? function handler
 const handleSuccess = (resolvedValue) => {
   console.log(resolvedValue);
 }
@@ -774,4 +773,3 @@ async function makeCoffee() { //? tell that makecoffe as async
 }
 
 makeCoffee();
-
