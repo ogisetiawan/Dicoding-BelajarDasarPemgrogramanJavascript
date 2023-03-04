@@ -68,6 +68,7 @@
 //? sebuah package manager untuk membantu membuat web app dalam javascript
 //? untuk minginstall package secara global npm install -g [nama-package]
 //? --save-dev untuk memasang devDependencies (jadi didalam folder node_module ada bbrpa dependecies )
+//? npx ; code package manager dapat menjalankan package yang sudah terpasang ataupun belum melalui sebuah perintah Terminal tanpa harus membuat script runner terlebih dahulu.
 
 //@ JAVASCRIPT TESTING
 //? Static Test : memastikan tidak ada typo 

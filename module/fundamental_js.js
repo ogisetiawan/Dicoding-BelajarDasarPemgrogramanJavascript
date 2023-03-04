@@ -53,6 +53,7 @@ const profile = {
 };
 const { firstName, lastName, age, isMale = "Laki" } = profile; //? destructuring dari property object profile
 console.log(firstName, lastName, age, isMale);
+console.log(profile);
 
 //~ Destructuring array
 const food = ["Seafood", "Salad", "Nugget", "Soup"];
